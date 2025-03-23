@@ -20,8 +20,6 @@ WORKDIR /home/server
 # Copy the main script
 COPY src/main.sh /main.sh
 
-RUN microdnf install -y dnf
-
 # Install required packages and cleanup afterwards
 RUN apt update &&\
     apt install -y curl findutils unar &&\
