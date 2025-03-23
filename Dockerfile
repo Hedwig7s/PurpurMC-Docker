@@ -31,6 +31,9 @@ RUN chmod +x /main.sh
 # Add new user for server execution
 RUN useradd -m purpur
 
+# Grant purpur user rwx permissions for /home/server
+RUN chown -R purpur:purpur /home/server && chmod -R 700 /home/server
+
 # Switch to the new user
 USER purpur
 
