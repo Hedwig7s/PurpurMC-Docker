@@ -25,6 +25,8 @@ RUN apt update &&\
     apt install -y curl findutils unar &&\
     rm -rf /var/lib/apt/lists/*
 
+# Make the script executable
+RUN chmod +x /main.sh
 
 # Add new user for server execution
 RUN useradd -m purpur
